@@ -1,0 +1,19 @@
+{
+  "extends": ["config:base", ":rebaseStalePrs", ":automergeLinters"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "extends": [
+      "group:all",
+      "schedule:weekly"
+    ],
+    "commitMessageAction": "Update"
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "stabilityDays": 3,
+      "rangeStrategy": "replace"
+    }
+  ]
+}
