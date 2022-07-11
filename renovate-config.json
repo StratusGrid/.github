@@ -1,12 +1,14 @@
 {
-  "extends": ["config:base", ":rebaseStalePrs", ":automergeLinters"],
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":automergeLinters",
+    "helpers:pinGitHubActionDigests"
+  ],
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
-    "extends": [
-      "group:all",
-      "schedule:weekly"
-    ],
+    "extends": ["group:all", "schedule:weekly"],
     "commitMessageAction": "Update"
   },
   "packageRules": [
@@ -14,6 +16,10 @@
       "matchDatasources": ["npm"],
       "stabilityDays": 3,
       "rangeStrategy": "replace"
+    },
+    {
+      "matchDatasources": ["github-actions"],
+      "automerge": true
     }
   ]
 }
