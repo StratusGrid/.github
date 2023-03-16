@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN_AUTOMATIC_REBASE }}
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
       - name: Automatic Rebase
-        uses: cirrus-actions/rebase@6e572f08c244e2f04f9beb85a943eb618218714d # tag=1.7
+        uses: cirrus-actions/rebase@b87d48154a87a85666003575337e27b8cd65f691 # 1.8
         with:
           autosquash: ${{ contains(github.event.comment.body, '/autosquash') || contains(github.event.comment.body, '/rebase-autosquash') }}
         env:
