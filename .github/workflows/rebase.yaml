@@ -14,7 +14,7 @@ jobs:
       )
     steps:
       - name: Checkout the latest code
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           token: ${{ secrets.GH_TOKEN_AUTOMATIC_REBASE }}
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
