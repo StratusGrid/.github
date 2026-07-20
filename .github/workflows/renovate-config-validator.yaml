@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3
       - name: Validate
         uses: rinchsan/renovate-config-validator@c5d3f4c55a5bea4916b59b056871bbb2a14d0cb7 # tag=v0.0.11
